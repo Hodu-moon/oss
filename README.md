@@ -1,5 +1,4 @@
 # oss
-2022-01
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Hodu-moon&show_icons=true&theme=gruvbox)
 
 
