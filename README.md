@@ -26,9 +26,35 @@ _top 는 table of process의 약자로 cpu와 메모리 이용에 관한 정보�
 예를들어 primary key[-pid]: 에 mem 을 입력하였다면 메모리 사용량으로 소팅을 한다
 //<span style="color:red">CPU</span>디폴트값은 cpu이다.
 
-|PID| COMMAND|<span style="color:red">CPU</span>| TIME|#TH| #WQ|#PORT|MEM|PURG|CMPRS|PGRP|PPID|STATE|
+|PID|COMMAND|CPU|TIME|#TH|#WQ|#PORT|MEM|PURG|CMPRS|PGRP|PPID|STATE|
 |:---|:-------|:---|:---- |:---|:---|:-----|:---|:----|:-----|:----|:----|:-----|
 |153| WindowServer|28.9|11:21:58|24|6|2685|743M+|185M|246M|153|1|sleeping|
+
+* PID - 해당 프로스세의 유일한 프로세스번호(Process ID, 키값)
+* COMMAND - 해당 프로세스를 실행한 커맨드를 나타냅니다.
+* CPU - 프로세스가 사용하는 cpu의 사용율
+* TIME - 프로세스가 사용한 토탈 CPU시간
+* #TH - the number of threads in the process.
+* #WQ - 
+* #PORT -  포트 번호이다.
+* MEM - 프로세스가 사용중인 RAM의 사용율
+* PURG - Purgeable memory size. //맥 os에서 사용되는 Sierra의 최적화 된 저장소와 관련되어있는것
+* CMPRS
+* PGRP - Process group ID.
+* PPID - Parent process ID
+* STATE - 프로세스의 현재 상태를 나타냅니다
+
+
+
+----------------
+* kill
+
+top 명령어를 통해 한 프로세스가 너무 많은 메모리나 CPU 자원을 사용하고있으면 
+
+
+`kill <PID Number>`
+
+명령어를 통해 프로세스를 없앨 수 있다.
 
 
 
