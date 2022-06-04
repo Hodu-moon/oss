@@ -10,7 +10,7 @@
 ## 리눅스 명령어
 ---------------------
 
-* top
+##  top
 
 <img width="600" alt="Screen Shot 2022-06-04 at 6 59 50 PM" src="https://user-images.githubusercontent.com/82320750/171994516-05f92148-e096-40c1-af85-d8e9292305cc.png">
 
@@ -63,6 +63,25 @@ __top [옵션]__
 
 
 ---------------------------------------------
+## ps
+
+Process Status의 약자입니다.
+
+`ps [option]`
+
+|옵션|내용|
+|:---:|:---:|
+|-A| 모든 프로세스를 출력합니다.|
+|-a|터미널과 연관된 프로세스를 출력합니다.(-A의 반대)터미널이랑 연관 없으면 스킵합|
+|-e|Identical to -A.|
+|-f|uid, pid, parent pid, recent CPU usage, process start time, controlling tty, elapsed CPU usage, and the associated command(이 옵션은 강력한 옵션인 것 같다)|
+|-p|특정 PID를 지정할 때 사용합니다.|
+|-u|특정 사용자의 프로세스 정보를 확인할 때 사용한다. 사용자를 지정하지 않으면 현재 사용자를 기준으로 정보를 출력한다.|
+
+`ps -ef`
+
+명령어를 통해 CPU사용률과 사용 중인 프로세스를 자주 체크합니다.
+
 
 
 
