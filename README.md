@@ -19,6 +19,9 @@ iterm2에서 top명령어를 치니 iterm2프로그램은 sleep 상태가 되었
 
 _top 는 table of process의 약자로 cpu와 메모리 이용에 관한 정보를 표시하는 수많은 유닉스 계열 운영체제에서 볼 수 있는 작업관리자 프로그램이다._
 
+
+* load average : 작업의 대기시간을 말합니다. 값이 1이 나왔다면 1분동안 평균 1개 정도의 프로세서가 대기상태에 있다는 것입니다. 싱글 코어 기준 loadaverage 가 0.7이면 초과하기전에 장비를 추가하던지 최적하를햐아하고, 1.0이면 즉시 문제를 찾아 수정하고 5.0이면 이미 망한거라고 본다고 한다. 멀티 cpu에서는 코어의개수가 1이면 1 2이면 2 이런식으로 따진다고 한다 내 cpu는 8개이므로 1.7이면 무리없이 잘 돌아가고있다.
+
 소문자'o'를 입력시 __primary key[-pid]:__라는 문자열이 나오는데 이곳에 mem,pid,command,time등 문자열의 사용량을 기준으로 소팅이 된다.
 예를들어 primary key[-pid]: 에 mem 을 입력하였다면 메모리 사용량으로 소팅을 한다
 //<span style="color:red">CPU</span>디폴트값은 cpu이다.
@@ -26,4 +29,6 @@ _top 는 table of process의 약자로 cpu와 메모리 이용에 관한 정보�
 |PID| COMMAND|<span style="color:red">CPU</span>| TIME|#TH| #WQ|#PORT|MEM|PURG|CMPRS|PGRP|PPID|STATE|
 |:---|:-------|:---|:---- |:---|:---|:-----|:---|:----|:-----|:----|:----|:-----|
 |153| WindowServer|28.9|11:21:58|24|6|2685|743M+|185M|246M|153|1|sleeping|
+
+
 
