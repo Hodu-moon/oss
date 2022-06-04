@@ -77,18 +77,30 @@ Process Status의 약자입니다.
 |-f|uid, pid, parent pid, recent CPU usage, process start time, controlling tty, elapsed CPU usage, and the associated command(이 옵션은 강력한 옵션인 것 같다)|
 |-p|특정 PID를 지정할 때 사용합니다.|
 |-u|특정 사용자의 프로세스 정보를 확인할 때 사용한다. 사용자를 지정하지 않으면 현재 사용자를 기준으로 정보를 출력한다.|
-
-`ps -ef`
-
-명령어를 통해 CPU사용률과 사용 중인 프로세스를 자주 체크합니다.
+|-x|로그인 상태에 있는 동안 아직 완료되지 않은 포로세스들을 보여준다. 유닉스 시스템은 사용자가 로그아웃 한 후에도 임의의 프로세서가 계속 동작하게 할 수 있다. 그러면 그 프로세스는 자신을 실행시킨 셸이 없이도 계속 자신의 일을 수행하는데 이러한 프로세스는 일반적인 ps 명령으로 확인할 수 없다. 이때 -x옵션을 사용하면 자신의 터미널이 없는 프로세스들을 확인 할 수 있다. |
 
 
+### 자주 쓰는 조합
+
+* ps -ef | grep '프로세스명'
+* ps aux | grep '프로세스명'<br>
+시스템에 동작중인 모든 프로세스를 소유자 정보와 함께 다양한 정보를 출력합니다.
+
+<img width="1028" alt="Screen Shot 2022-06-04 at 11 09 18 PM" src="https://user-images.githubusercontent.com/82320750/172005071-9dfdb13d-1b77-44bc-8853-d6793263ccc1.png">
+알아보기 편하게 나온다!
+
+ex) `ps aux | grep apache`<br>
+특정 프로세스 보고싶으면 이렇게 한다.
+* `ps -ef | more `<br> 한줄씩 보고싶으면
+ex) ps -fp [PID]
+PID를 키워드로 프로세스 정보를 확인하는 방법입니다.
+ex)
 
 
 
 
 ----------------
-* kill
+## kill
 
 top 명령어를 통해 한 프로세스가 너무 많은 메모리나 CPU 자원을 사용하고있으면 
 
