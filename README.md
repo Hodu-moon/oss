@@ -94,13 +94,57 @@ ex) `ps aux | grep apache`<br>
 * `ps -ef | more `<br> 한줄씩 보고싶으면
 ex) ps -fp [PID]
 PID를 키워드로 프로세스 정보를 확인하는 방법입니다.
-ex)
+* `ps -t pts/18`<br>
+특정 TTY에서 실행되는 프로세스 또한 뽑아서 확인할 수 있습니다.
 
+--------------------
+## jobs
+
+`jobs [옵션][작업번호]`<br>
+|옵션|번호|
+|:---:|:---:|
+|-l|프로세스 그룹ID를 state 필드 앞에 출력|
+|-n|프로세스 그룹 중에 대표 프로세스 ID를 출력|
+|-p|각 프로세스 ID에 대해 한 행씩 출력|
+|command|지정한 명령어를 실행|
+
+
+
+<br>
+|상태|설명|
+|:---:|:---:|
+|Running|작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임을 뜻한다.|
+|Done|작업이 완료되어 0을 반환하고 종료했음을 뜻한다.|
+|Done(code)|작업이 정상적으로 완료했으며, 0이 아닌 코드를 반환했음을 뜻한다.|
+|Stopped|작업이 일시 중단됨을 뜻한다.|
+|Stopped(SIGTSTP)|SIGSTP 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped(SIGSTOP)|SIGSTOP 신호가 일시 중단했음을 뜻한다.|
+|Stopped(SIGTTIN)|SIGTTIN 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped(SIGTTOUT)|SIGTTOUT 신호가 작업을 일시 중단했음을 뜻한다.|
 
 
 
 ----------------
 ## kill
+
+
+kill 명령어는 프로세스에 **시그널(signal)** 을 보내는 명령어입니다.
+
+     1       HUP (hang up)
+     2       INT (interrupt)
+     3       QUIT (quit)
+     6       ABRT (abort)
+     9       KILL (non-catchable, non-ignorable kill)
+     14      ALRM (alarm clock)
+     15      TERM (software termination signal)
+     
+ kill 명령어의 default 시그널은 TERM(15)입니다. 
+  
+`kill -s[signal][pid]`
+
+
+     
+     
 
 top 명령어를 통해 한 프로세스가 너무 많은 메모리나 CPU 자원을 사용하고있으면 
 
@@ -109,5 +153,9 @@ top 명령어를 통해 한 프로세스가 너무 많은 메모리나 CPU 자�
 
 명령어를 통해 프로세스를 없앨 수 있다.
 
+
+----------------------------------
+
+## vim 에디터 매크로 사용방법(q, @)
 
 
